@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flood Prediction</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+
+<body>
+
+    <h1>Flood Prediction System</h1>
+
+    <p>
+        Welcome to the Flood Prediction System.
+        This application predicts the possibility of floods using
+        Machine Learning based on rainfall and weather data.
+    </p>
+
+    <a href="/predict">
+        <button>Predict Flood</button>
+    </a>
+
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+
+</body>
+</html>

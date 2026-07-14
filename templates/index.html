@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flood Prediction Form</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+
+<body>
+
+    <h1>Flood Prediction</h1>
+
+    <form action="/predict" method="POST">
+
+        <label>Temperature</label><br>
+<input type="number" name="Temp" required><br><br>
+
+<label>Humidity</label><br>
+<input type="number" name="Humidity" required><br><br>
+
+<label>Cloud Cover (%)</label><br>
+<input type="number" name="Cloud_Cover" required><br><br>
+
+<label>Annual Rainfall (mm)</label><br>
+<input type="number" step="any" name="Annual_Rainfall" required><br><br>
+
+<label>Jan-Feb Rainfall (mm)</label><br>
+<input type="number" step="any" name="Jan_Feb_Rainfall" required><br><br>
+
+<label>Mar-May Rainfall (mm)</label><br>
+<input type="number" step="any" name="Mar_May_Rainfall" required><br><br>
+
+<label>Jun-Sep Rainfall (mm)</label><br>
+<input type="number" step="any" name="Jun_Sep_Rainfall" required><br><br>
+
+<label>Oct-Dec Rainfall (mm)</label><br>
+<input type="number" step="any" name="Oct_Dec_Rainfall" required><br><br>
+
+<label>Average June Rainfall</label><br>
+<input type="number" step="any" name="avgjune" required><br><br>
+
+<label>Sub</label><br>
+<input type="number" step="any" name="sub" required><br><br>
+
+<button type="submit">Predict</button>
+    </form>
+
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+
+</body>
+</html>
